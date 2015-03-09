@@ -1,0 +1,42 @@
+body {
+  padding: 0;
+  margin: 0;
+  padding-top: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+.headroom{
+    display: block;
+    background-color: #ffffff;
+}
+.headroom--pinned{
+    display: block;
+    background-color: #ffffff;
+}
+.headroom--unpinned{
+    display: none;
+    background-color: #ffffff;
+}
+
+.gunping{
+    background-color: #337ab7;
+    color: #cdbfe3;
+    height: 200px;
+}
+
+.content{
+    margin-top: 0;
+}
+.maincontent{
+    padding-top: 10px;
+}
+
+.navcontent{
+    padding-top: 10px;
+}
+
+.navcontent ul{
+    padding: 10px;
+    background-color:burlywood;
+}
+

@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="express" type="javaScript">
+    <properties>
+      <sourceFilesUrls>
+        <item url="file://$APPLICATION_HOME_DIR$/express.d.ts" />
+      </sourceFilesUrls>
+    </properties>
+    <CLASSES>
+      <root url="file://$APPLICATION_HOME_DIR$/express.d.ts" />
+    </CLASSES>
+    <SOURCES />
+  </library>
+</component>

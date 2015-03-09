@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Balakit</title>
+    <link href="/stylesheets/bootstrap.css" rel="stylesheet">
+    <link href="/stylesheets/style.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+<!-- Fixed navbar -->
+<nav class="navbar navbar-fixed-top headroom">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Balakit</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Balakit</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">首页</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <!--
+                <%if(loginUser){%>
+                    <li  id="lilogined" class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span id="loginedname"><%=loginUser%></span><span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="#">个人中心</a></li>
+                            <li><a href="#">退出</a></li>
+                        </ul>
+                    </li>
+                <%}else{%>
+                    <li id="lilogin" class="<%if(loginUser){%><%=' hide'%><%}%>"><a href="#" data-toggle="modal" data-target="#loginModal" id="alogin">登录</a></li>
+                <%}%> -->
+                <li><a href="#" data-toggle="modal" data-target="#loginModal">注册</a></li>
+            </ul>
+        </div><!--/.nav-collapse -->
+    </div>
+</nav>
+<div class="container">
+    <div class="row gunping">
+        <div class="col-sm-12 col-xs-12">
+            <h1>Hello, world!</h1>
+            <p>...</p>
+            <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
+        </div>
+    </div>
+    <div class="row content">
+        <div class="col-sm-9 maincontent">
+            <div class="row">
+                <%for(var i=0;i<45;i++){%>
+                <div class="col-sm-2 col-xs-4">
+                    <div class="thumbnail">
+                        <img src="http://placehold.it/100x100">
+                        <div class="caption">
+                            <h6>Thumbnail label</h6>
+                        </div>
+                    </div>
+                </div>
+                <%}%>
+            </div>
+            <div class="row">
+                <form method="post" action="/uploadimg" enctype="multipart/form-data">
+                    用户:<input type="text" name="submit-name" />
+                    文件:<input type="file" name="files" multiple="multiple" />
+                    <input type="submit" value="send" />
+                </form>
+            </div>
+        </div>
+
+        <div class="col-sm-3 navcontent">
+            <ul class="nav nav-pills nav-stacked">
+                <li role="presentation" class="active"><a href="#">Home</a></li>
+                <%for(var i=0;i<30;i++){%>
+                <li role="presentation"><a href="#">Profile</a></li>
+                <%}%>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="footer">
+    <div class="container">
+        <div class="row">
+            <hr>
+            <ul class="list-inline text-center">
+                <li>
+                    京ICP备11008151号
+                </li>
+                <li>
+                    京公网安备11010802014853
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+
+
+<div class="modal"  id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">用户登录</h4>
+            </div>
+            <div class="modal-body">
+                <form class="form-horizontal" role="form" method="get">
+                    <div id="errordiv" class="alert alert-danger hide"></div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-2" for="inputEmail">邮箱</label>
+                        <div class="col-sm-10">
+                            <input class="form-control col-sm-10" type="email" id="inputEmail"  placeholder="请输入邮箱" autofocus>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputPassword" class="col-sm-2 control-label">密码</label>
+                        <div class="col-sm-10">
+                            <input type="password" class="form-control" id="inputPassword" placeholder="请输入密码">
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" id="btnlogin">登录</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
+<script src="http://cdn.bootcss.com/jquery/1.11.2/jquery.min.js"></script>
+<script src="http://cdn.bootcss.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<script src="/javascripts/headroom.js"></script>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug-->
+<script src="/javascripts/ie10-viewport-bug-workaround.js"></script>
+<script>
+    $(function(){
+        var myElement = document.querySelector("nav");
+        var headroom  = new Headroom(myElement,{tolerance : {up : 5,down :5},offset : 150});
+        headroom.init();
+
+        $('#btnlogin').click(function(){
+            var userName = $('#inputEmail').val();
+            var passWord = $('#inputPassword').val();
+            $.get('/login/'+userName+'/'+passWord,{'t':new Date().getTime()},function(data,status){
+                if(data.s == 1){
+                    var loginedHtml  = '<li  id="lilogined" class="dropdown">';
+                    loginedHtml += '<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span id="loginedname">'+data.u+'</span><span class="caret"></span></a>';
+                    loginedHtml += '<ul class="dropdown-menu" role="menu">';
+                    loginedHtml +=         '<li><a href="#">个人中心</a></li>';
+                    loginedHtml += '<li><a href="#">退出</a></li>';
+                    loginedHtml += '</ul>';
+                    loginedHtml += '</li>';
+                    $('#lilogin').replaceWith(loginedHtml);
+                    $('#loginModal').modal('hide');
+                }else{
+                    $('#errordiv').removeClass('hide').text('登录失败');
+                }
+            });
+        });
+    });
+
+</script>
+</body>
+</html>
+

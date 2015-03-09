@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="jquery" type="javaScript">
+    <properties>
+      <sourceFilesUrls>
+        <item url="file://$APPLICATION_HOME_DIR$/jquery.d.ts" />
+      </sourceFilesUrls>
+    </properties>
+    <CLASSES>
+      <root url="file://$APPLICATION_HOME_DIR$/jquery.d.ts" />
+    </CLASSES>
+    <SOURCES />
+  </library>
+</component>
